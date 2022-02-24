@@ -1,0 +1,12 @@
+C:\Users\Nirojd\source\repos\Practice_Management_System_API\EmailService\bin\Debug\net5.0\EmailService.deps.json
+C:\Users\Nirojd\source\repos\Practice_Management_System_API\EmailService\bin\Debug\net5.0\EmailService.dll
+C:\Users\Nirojd\source\repos\Practice_Management_System_API\EmailService\bin\Debug\net5.0\ref\EmailService.dll
+C:\Users\Nirojd\source\repos\Practice_Management_System_API\EmailService\bin\Debug\net5.0\EmailService.pdb
+C:\Users\Nirojd\source\repos\Practice_Management_System_API\EmailService\obj\Debug\net5.0\EmailService.csproj.AssemblyReference.cache
+C:\Users\Nirojd\source\repos\Practice_Management_System_API\EmailService\obj\Debug\net5.0\EmailService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nirojd\source\repos\Practice_Management_System_API\EmailService\obj\Debug\net5.0\EmailService.AssemblyInfoInputs.cache
+C:\Users\Nirojd\source\repos\Practice_Management_System_API\EmailService\obj\Debug\net5.0\EmailService.AssemblyInfo.cs
+C:\Users\Nirojd\source\repos\Practice_Management_System_API\EmailService\obj\Debug\net5.0\EmailService.csproj.CoreCompileInputs.cache
+C:\Users\Nirojd\source\repos\Practice_Management_System_API\EmailService\obj\Debug\net5.0\EmailService.dll
+C:\Users\Nirojd\source\repos\Practice_Management_System_API\EmailService\obj\Debug\net5.0\ref\EmailService.dll
+C:\Users\Nirojd\source\repos\Practice_Management_System_API\EmailService\obj\Debug\net5.0\EmailService.pdb
