@@ -64,47 +64,87 @@ namespace UserManagementAndAdministration_API.DataManager
         }
         
 
+        //public async Task<string> LoginAsync(SignInDto signInDto)
+        //{
+           
+        //    var result = await _signInManager.PasswordSignInAsync(signInDto.Email, signInDto.Password, false, true);
+            
+        //    if (result.IsLockedOut)
+        //    {
+        //        return "Locked";
+        //    }
+        //    if (!result.Succeeded)
+        //    {
+               
+        //        return null;
+        //    }
+        //    await ResetLockoutUser(signInDto.Email);
+            
+        //    var user =  _userManager.Users.Where(x => x.Email == signInDto.Email).ToList();
+           
+
+
+        //    var authClaims = new List<Claim>
+        //    {
+        //        new Claim(ClaimTypes.Name, signInDto.Email,signInDto.Password),
+        //        new Claim("Email", signInDto.Email),
+        //        new Claim("FirstName", user[0].FirstName),
+        //        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+        //        new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString())
+        //    };
+        //    var authSigninKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_configuration["JWT:Key"]));
+
+        //    var Token = new JwtSecurityToken(
+        //        issuer: _configuration["JWT:Issuer"],
+        //        audience: _configuration["JWT:Audience"],
+        //        expires: DateTime.Now.AddMinutes(15),
+        //        claims: authClaims,
+        //        signingCredentials: new SigningCredentials(authSigninKey, SecurityAlgorithms.HmacSha256Signature)
+        //        );
+        //    return new JwtSecurityTokenHandler().WriteToken(Token);
+        //}
+
         public async Task<string> LoginAsync(SignInDto signInDto)
         {
-           
+
             var result = await _signInManager.PasswordSignInAsync(signInDto.Email, signInDto.Password, false, true);
-            
+
             if (result.IsLockedOut)
             {
                 return "Locked";
             }
             if (!result.Succeeded)
             {
-               
+
                 return null;
             }
             await ResetLockoutUser(signInDto.Email);
-            
-            var user =  _userManager.Users.Where(x => x.Email == signInDto.Email).ToList();
-           
 
-
+            var user = _userManager.Users.Where(x => x.Email == signInDto.Email).ToList();
+            var roles = await GetUserRole(signInDto.Email);
             var authClaims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, signInDto.Email,signInDto.Password),
-                new Claim("Email", signInDto.Email),
-                new Claim("FirstName", user[0].FirstName),
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString())
+            new Claim(ClaimTypes.Name, signInDto.Email,signInDto.Password),
+            new Claim("Email", signInDto.Email),
+            new Claim("FirstName", user[0].FirstName),
+            new Claim("Id", user[0].Id),
+            new Claim("Role", roles[0]),
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+            new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString())
             };
             var authSigninKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_configuration["JWT:Key"]));
 
+
+
             var Token = new JwtSecurityToken(
-                issuer: _configuration["JWT:Issuer"],
-                audience: _configuration["JWT:Audience"],
-                expires: DateTime.Now.AddMinutes(15),
-                claims: authClaims,
-                signingCredentials: new SigningCredentials(authSigninKey, SecurityAlgorithms.HmacSha256Signature)
-                );
+            issuer: _configuration["JWT:Issuer"],
+            audience: _configuration["JWT:Audience"],
+            expires: DateTime.Now.AddMinutes(20),
+            claims: authClaims,
+            signingCredentials: new SigningCredentials(authSigninKey, SecurityAlgorithms.HmacSha256Signature)
+            );
             return new JwtSecurityTokenHandler().WriteToken(Token);
         }
-    
-
         public async Task<IdentityResult> SignUpAsync(SignUpDto SignUpDto)
         {
             
