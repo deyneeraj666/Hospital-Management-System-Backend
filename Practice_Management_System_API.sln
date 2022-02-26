@@ -7,23 +7,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserManagementAndAdministra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailService", "EmailService\EmailService.csproj", "{98F6380F-75A2-4779-8EB0-ECBE2D9B216C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppointmentScheduling_API", "AppointmentScheduling_API\AppointmentScheduling_API.csproj", "{762D2683-E373-44F0-A41D-413FF9045F0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppointmentScheduling_API", "AppointmentScheduling_API\AppointmentScheduling_API.csproj", "{762D2683-E373-44F0-A41D-413FF9045F0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allergies_API", "Allergies_API\Allergies_API.csproj", "{89B089E2-E4B5-469F-8D0A-F9A1FD0B86FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Allergies_API", "Allergies_API\Allergies_API.csproj", "{89B089E2-E4B5-469F-8D0A-F9A1FD0B86FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diagnoses_API", "Diagnoses_API\Diagnoses_API.csproj", "{D6870FC5-FD41-4F23-A073-84D616D277EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diagnoses_API", "Diagnoses_API\Diagnoses_API.csproj", "{D6870FC5-FD41-4F23-A073-84D616D277EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VitalSigns_API", "VitalSigns_API\VitalSigns_API.csproj", "{8E8DD267-9325-4CD1-893F-473F08C4D6DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VitalSigns_API", "VitalSigns_API\VitalSigns_API.csproj", "{8E8DD267-9325-4CD1-893F-473F08C4D6DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medications_API", "Medications_API\Medications_API.csproj", "{90B795FF-2DD1-47CD-9381-CCD9C281BA7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medications_API", "Medications_API\Medications_API.csproj", "{90B795FF-2DD1-47CD-9381-CCD9C281BA7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientVisit_API", "PatientVisit_API\PatientVisit_API.csproj", "{3B403887-F68D-4527-8344-44B1E0778265}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PatientVisit_API", "PatientVisit_API\PatientVisit_API.csproj", "{3B403887-F68D-4527-8344-44B1E0778265}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observations_API", "Observations_API\Observations_API.csproj", "{3C1B1BF8-F8E7-42E0-9898-3CD3D2DBF38F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Observations_API", "Observations_API\Observations_API.csproj", "{3C1B1BF8-F8E7-42E0-9898-3CD3D2DBF38F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reports_API", "Reports_API\Reports_API.csproj", "{88F4FC33-3E7A-4949-AFED-E4536B7DDE1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reports_API", "Reports_API\Reports_API.csproj", "{88F4FC33-3E7A-4949-AFED-E4536B7DDE1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_Gateway", "API_Gateway\API_Gateway.csproj", "{DBCD452A-0379-478D-AE05-446656C9255B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API_Gateway", "API_Gateway\API_Gateway.csproj", "{DBCD452A-0379-478D-AE05-446656C9255B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientManagementAPI", "PatientManagementAPI\PatientManagementAPI.csproj", "{0F88AA5C-4A0B-480E-B56A-50D871A7E3D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{DBCD452A-0379-478D-AE05-446656C9255B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBCD452A-0379-478D-AE05-446656C9255B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBCD452A-0379-478D-AE05-446656C9255B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F88AA5C-4A0B-480E-B56A-50D871A7E3D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F88AA5C-4A0B-480E-B56A-50D871A7E3D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F88AA5C-4A0B-480E-B56A-50D871A7E3D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F88AA5C-4A0B-480E-B56A-50D871A7E3D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
