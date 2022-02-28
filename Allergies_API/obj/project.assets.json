@@ -193,19 +193,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Nirojd\\.nuget\\packages\\": {}
+    "C:\\Users\\Rajeshwari\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nirojd\\source\\repos\\Practice_Management_System_API\\Allergies_API\\Allergies_API.csproj",
+      "projectUniqueName": "C:\\Users\\Rajeshwari\\Desktop\\PMS_Backend\\Allergies_API\\Allergies_API.csproj",
       "projectName": "Allergies_API",
-      "projectPath": "C:\\Users\\Nirojd\\source\\repos\\Practice_Management_System_API\\Allergies_API\\Allergies_API.csproj",
-      "packagesPath": "C:\\Users\\Nirojd\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nirojd\\source\\repos\\Practice_Management_System_API\\Allergies_API\\obj\\",
+      "projectPath": "C:\\Users\\Rajeshwari\\Desktop\\PMS_Backend\\Allergies_API\\Allergies_API.csproj",
+      "packagesPath": "C:\\Users\\Rajeshwari\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rajeshwari\\Desktop\\PMS_Backend\\Allergies_API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Nirojd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Rajeshwari\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -254,7 +254,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }

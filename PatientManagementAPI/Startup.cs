@@ -31,7 +31,7 @@ namespace PatientManagementAPI
             options.UseSqlServer(Configuration.GetConnectionString("UserManagementDBConnectionString")));
 
             services.AddScoped<IDemographicRepo, DemographicRepo>();
-
+            services.AddScoped<IEmergencyRepo, EmergencyRepo>();
 
             services.AddControllers();
         }

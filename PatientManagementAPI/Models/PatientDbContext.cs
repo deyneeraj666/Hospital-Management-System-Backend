@@ -15,5 +15,7 @@ namespace PatientManagementAPI.Models
 
         public DbSet<Demographic> Demographics { get; set; }
 
+        public DbSet<EmergencyContact> Patient_Emergency_Details { get; set; }
+
     }
 }
