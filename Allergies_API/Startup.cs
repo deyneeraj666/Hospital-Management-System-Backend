@@ -1,7 +1,10 @@
+using Allergies_API.Model;
+using Allergies_API.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -26,6 +29,11 @@ namespace Allergies_API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<AllergyDbContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
+
+            services.AddScoped<IAllergyRepo, AllergyRepo>();
+            services.AddScoped<IPatientAllergyRepo, PatientAllergyRepo>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -47,6 +55,10 @@ namespace Allergies_API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(options => options.WithOrigins("http://localhost:4200")
+                                       .AllowAnyMethod()
+                                       .AllowAnyHeader());
 
             app.UseAuthorization();
 

@@ -30,7 +30,7 @@ namespace PatientManagementAPI.Repository
                 existingDemo.FirstName = demographic.FirstName;
                 existingDemo.LastName = demographic.LastName;
                 existingDemo.DOB = demographic.DOB;
-                existingDemo.Age = demographic.Age;
+               // existingDemo.Age = demographic.Age;
                 existingDemo.Gender = demographic.Gender;
                 existingDemo.Race = demographic.Race;
                 existingDemo.Ethnicity = demographic.Ethnicity;

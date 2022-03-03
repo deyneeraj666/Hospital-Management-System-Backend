@@ -26,3 +26,4 @@ C:\Users\Rajeshwari\Desktop\PMS_Backend\PatientVisit_API\obj\Debug\net5.0\Patien
 C:\Users\Rajeshwari\Desktop\PMS_Backend\PatientVisit_API\obj\Debug\net5.0\ref\PatientVisit_API.dll
 C:\Users\Rajeshwari\Desktop\PMS_Backend\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.pdb
 C:\Users\Rajeshwari\Desktop\PMS_Backend\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.genruntimeconfig.cache
+C:\Users\Rajeshwari\Desktop\PMS_Backend\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.csproj.AssemblyReference.cache

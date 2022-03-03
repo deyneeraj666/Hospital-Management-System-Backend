@@ -26,3 +26,4 @@ C:\Users\Rajeshwari\Desktop\PMS_Backend\Medications_API\obj\Debug\net5.0\Medicat
 C:\Users\Rajeshwari\Desktop\PMS_Backend\Medications_API\obj\Debug\net5.0\ref\Medications_API.dll
 C:\Users\Rajeshwari\Desktop\PMS_Backend\Medications_API\obj\Debug\net5.0\Medications_API.pdb
 C:\Users\Rajeshwari\Desktop\PMS_Backend\Medications_API\obj\Debug\net5.0\Medications_API.genruntimeconfig.cache
+C:\Users\Rajeshwari\Desktop\PMS_Backend\Medications_API\obj\Debug\net5.0\Medications_API.csproj.AssemblyReference.cache

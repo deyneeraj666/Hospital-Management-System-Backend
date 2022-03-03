@@ -26,3 +26,4 @@ C:\Users\Rajeshwari\Desktop\PMS_Backend\AppointmentScheduling_API\obj\Debug\net5
 C:\Users\Rajeshwari\Desktop\PMS_Backend\AppointmentScheduling_API\obj\Debug\net5.0\ref\AppointmentScheduling_API.dll
 C:\Users\Rajeshwari\Desktop\PMS_Backend\AppointmentScheduling_API\obj\Debug\net5.0\AppointmentScheduling_API.pdb
 C:\Users\Rajeshwari\Desktop\PMS_Backend\AppointmentScheduling_API\obj\Debug\net5.0\AppointmentScheduling_API.genruntimeconfig.cache
+C:\Users\Rajeshwari\Desktop\PMS_Backend\AppointmentScheduling_API\obj\Debug\net5.0\AppointmentScheduling_API.csproj.AssemblyReference.cache

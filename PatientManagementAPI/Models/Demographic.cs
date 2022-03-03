@@ -25,7 +25,7 @@ namespace PatientManagementAPI.Models
         [Required]
         public DateTime DOB { get; set; }
 
-        public int Age { get; set; }
+        //public int Age { get; set; }
 
         [Required]
         public string Gender { get; set; }

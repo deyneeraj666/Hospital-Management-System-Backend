@@ -26,3 +26,4 @@ C:\Users\Rajeshwari\Desktop\PMS_Backend\VitalSigns_API\obj\Debug\net5.0\VitalSig
 C:\Users\Rajeshwari\Desktop\PMS_Backend\VitalSigns_API\obj\Debug\net5.0\ref\VitalSigns_API.dll
 C:\Users\Rajeshwari\Desktop\PMS_Backend\VitalSigns_API\obj\Debug\net5.0\VitalSigns_API.pdb
 C:\Users\Rajeshwari\Desktop\PMS_Backend\VitalSigns_API\obj\Debug\net5.0\VitalSigns_API.genruntimeconfig.cache
+C:\Users\Rajeshwari\Desktop\PMS_Backend\VitalSigns_API\obj\Debug\net5.0\VitalSigns_API.csproj.AssemblyReference.cache
