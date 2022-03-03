@@ -5796,19 +5796,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rajeshwari\\.nuget\\packages\\": {}
+    "C:\\Users\\PranjalP\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rajeshwari\\Desktop\\PMS_Backend\\PatientManagementAPI\\PatientManagementAPI.csproj",
+      "projectUniqueName": "C:\\Pranjal_Sample_Project\\PreImpact\\PMS_MicroServices\\PatientManagementAPI\\PatientManagementAPI.csproj",
       "projectName": "PatientManagementAPI",
-      "projectPath": "C:\\Users\\Rajeshwari\\Desktop\\PMS_Backend\\PatientManagementAPI\\PatientManagementAPI.csproj",
-      "packagesPath": "C:\\Users\\Rajeshwari\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rajeshwari\\Desktop\\PMS_Backend\\PatientManagementAPI\\obj\\",
+      "projectPath": "C:\\Pranjal_Sample_Project\\PreImpact\\PMS_MicroServices\\PatientManagementAPI\\PatientManagementAPI.csproj",
+      "packagesPath": "C:\\Users\\PranjalP\\.nuget\\packages\\",
+      "outputPath": "C:\\Pranjal_Sample_Project\\PreImpact\\PMS_MicroServices\\PatientManagementAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Rajeshwari\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\PranjalP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5863,7 +5863,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

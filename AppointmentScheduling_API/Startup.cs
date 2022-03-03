@@ -1,6 +1,10 @@
+using AppointmentScheduling_API.DataManager;
+using AppointmentScheduling_API.Models;
+using AppointmentScheduling_API.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -31,6 +35,8 @@ namespace AppointmentScheduling_API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AppointmentScheduling_API", Version = "v1" });
             });
+            services.AddDbContext<AppointmentContext>(options => options.UseSqlServer(Configuration.GetConnectionString("AppointmentDBConnectionString")));
+            services.AddTransient<IAppointmentRepository, AppointmentRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,7 +50,9 @@ namespace AppointmentScheduling_API
             }
 
             app.UseRouting();
-
+            app.UseCors(options => options.WithOrigins("http://localhost:4200")
+                                          .AllowAnyMethod()
+                                          .AllowAnyHeader());
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
