@@ -10,6 +10,7 @@ namespace UserManagementAndAdministration_API.Models
     {
         
         public string EmpId { get; set; }
+        public string Title { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime Dob { get; set; }

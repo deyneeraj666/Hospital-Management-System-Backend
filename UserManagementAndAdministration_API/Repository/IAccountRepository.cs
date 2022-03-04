@@ -18,8 +18,9 @@ namespace UserManagementAndAdministration_API.Repository
         Task<IList<string>> GetUserRole(string email);
         Task<string> ResetPassword(string email, string otp, string newPassword);
         Task<string> SendPasswordResetCode(string email);
-
-
+        Task BlockUser(string email);
+        Task DeleteUser(string email);
+        Task<IdentityResult> UpdateUser(UpdateUserDto update_user);
 
     }
 }

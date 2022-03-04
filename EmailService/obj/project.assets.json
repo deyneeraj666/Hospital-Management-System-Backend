@@ -3761,19 +3761,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PranjalP\\.nuget\\packages\\": {}
+    "C:\\Users\\Nirojd\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Pranjal_Sample_Project\\PreImpact\\PMS_MicroServices\\EmailService\\EmailService.csproj",
+      "projectUniqueName": "C:\\Users\\Nirojd\\source\\repos\\Practice_Management_System_API\\EmailService\\EmailService.csproj",
       "projectName": "EmailService",
-      "projectPath": "C:\\Pranjal_Sample_Project\\PreImpact\\PMS_MicroServices\\EmailService\\EmailService.csproj",
-      "packagesPath": "C:\\Users\\PranjalP\\.nuget\\packages\\",
-      "outputPath": "C:\\Pranjal_Sample_Project\\PreImpact\\PMS_MicroServices\\EmailService\\obj\\",
+      "projectPath": "C:\\Users\\Nirojd\\source\\repos\\Practice_Management_System_API\\EmailService\\EmailService.csproj",
+      "packagesPath": "C:\\Users\\Nirojd\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Nirojd\\source\\repos\\Practice_Management_System_API\\EmailService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\PranjalP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Nirojd\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

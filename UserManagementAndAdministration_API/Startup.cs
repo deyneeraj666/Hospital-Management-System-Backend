@@ -50,7 +50,7 @@ namespace UserManagementAndAdministration_API
             var lockoutOptions = new LockoutOptions()
             {
                 AllowedForNewUsers = true,
-                DefaultLockoutTimeSpan = TimeSpan.FromMinutes(3),
+                DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5),
                 MaxFailedAccessAttempts = 3
             };
             services.AddIdentity<ApplicationUser, IdentityRole>(options => options.Lockout = lockoutOptions)

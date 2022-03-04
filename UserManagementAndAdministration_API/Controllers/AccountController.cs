@@ -99,10 +99,30 @@ namespace UserManagementAndAdministration_API.Controllers
             return Ok("Unblocked "+ userId.email);
         }
 
+        [HttpPost("BlockUser")]
+        public async Task<IActionResult> Block(UnblockUserByIdDto userId)
+        {
+            await _accountRepository.BlockUser(userId.email);
+            return Ok("Blocked " + userId.email);
+        }
+
+        [HttpPost("DeleteUser")]
+        public async Task<IActionResult> DeleteUser(UnblockUserByIdDto userId)
+        {
+            await _accountRepository.DeleteUser(userId.email);
+            return Ok("Deleted " + userId.email);
+        }
+
+        
+        [HttpPut("UpdateUser")]
+        public async Task<IActionResult> UpdateUser([FromBody] UpdateUserDto update_user)
+        {
+            await _accountRepository.UpdateUser(update_user);
+            return Ok("Updated ");
+        }
 
 
 
-       
         [HttpPost("ChangePassword")]
         public async Task<string> ResetPassword(ChangePasswordDto usermodel)
         {

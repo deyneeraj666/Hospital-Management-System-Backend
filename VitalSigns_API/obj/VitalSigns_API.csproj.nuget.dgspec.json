@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Pranjal_Sample_Project\\PreImpact\\PMS_MicroServices\\VitalSigns_API\\VitalSigns_API.csproj": {}
+    "C:\\Users\\Nirojd\\source\\repos\\Practice_Management_System_API\\VitalSigns_API\\VitalSigns_API.csproj": {}
   },
   "projects": {
-    "C:\\Pranjal_Sample_Project\\PreImpact\\PMS_MicroServices\\VitalSigns_API\\VitalSigns_API.csproj": {
+    "C:\\Users\\Nirojd\\source\\repos\\Practice_Management_System_API\\VitalSigns_API\\VitalSigns_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Pranjal_Sample_Project\\PreImpact\\PMS_MicroServices\\VitalSigns_API\\VitalSigns_API.csproj",
+        "projectUniqueName": "C:\\Users\\Nirojd\\source\\repos\\Practice_Management_System_API\\VitalSigns_API\\VitalSigns_API.csproj",
         "projectName": "VitalSigns_API",
-        "projectPath": "C:\\Pranjal_Sample_Project\\PreImpact\\PMS_MicroServices\\VitalSigns_API\\VitalSigns_API.csproj",
-        "packagesPath": "C:\\Users\\PranjalP\\.nuget\\packages\\",
-        "outputPath": "C:\\Pranjal_Sample_Project\\PreImpact\\PMS_MicroServices\\VitalSigns_API\\obj\\",
+        "projectPath": "C:\\Users\\Nirojd\\source\\repos\\Practice_Management_System_API\\VitalSigns_API\\VitalSigns_API.csproj",
+        "packagesPath": "C:\\Users\\Nirojd\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nirojd\\source\\repos\\Practice_Management_System_API\\VitalSigns_API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PranjalP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nirojd\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
