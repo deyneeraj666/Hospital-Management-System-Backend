@@ -34,6 +34,11 @@ namespace Allergies_API.Controllers
             return Ok(patientAllergies);
         }
 
-
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<PatientAllergy>> DeletePatientAllergy(int id)
+        {
+            PatientAllergy patientAllergy = await _allergyRepo.DeletePatientAllergy(id);
+            return Ok(patientAllergy);
+        }
     }
 }

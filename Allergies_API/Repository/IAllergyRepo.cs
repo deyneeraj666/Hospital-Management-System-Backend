@@ -8,7 +8,7 @@ namespace Allergies_API.Repository
 {
     public interface IAllergyRepo
     {
-        Task<IEnumerable<string>> GetAllAllergies();
+        Task<IEnumerable<string>> GetAllAllergyTypes();
         Task<Allergy> GetAllergyById(string allergyId);
         Task<Allergy> AddAllergy(Allergy allergy);
         Task<IEnumerable<string>> GetAllergyNamesByAllergyTypeName(string allergyType);
