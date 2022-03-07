@@ -84,3 +84,4 @@ C:\Users\Nirojd\source\repos\Practice_Management_System_API\Diagnoses_API\obj\De
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\Diagnoses_API\obj\Debug\net5.0\ref\Diagnoses_API.dll
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\Diagnoses_API\obj\Debug\net5.0\Diagnoses_API.pdb
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\Diagnoses_API\obj\Debug\net5.0\Diagnoses_API.genruntimeconfig.cache
+C:\Users\Nirojd\source\repos\Practice_Management_System_API\Diagnoses_API\obj\Debug\net5.0\Diagnoses_API.csproj.AssemblyReference.cache

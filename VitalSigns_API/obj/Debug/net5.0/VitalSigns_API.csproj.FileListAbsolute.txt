@@ -84,3 +84,4 @@ C:\Users\Nirojd\source\repos\Practice_Management_System_API\VitalSigns_API\obj\D
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\VitalSigns_API\obj\Debug\net5.0\ref\VitalSigns_API.dll
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\VitalSigns_API\obj\Debug\net5.0\VitalSigns_API.pdb
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\VitalSigns_API\obj\Debug\net5.0\VitalSigns_API.genruntimeconfig.cache
+C:\Users\Nirojd\source\repos\Practice_Management_System_API\VitalSigns_API\obj\Debug\net5.0\VitalSigns_API.csproj.AssemblyReference.cache

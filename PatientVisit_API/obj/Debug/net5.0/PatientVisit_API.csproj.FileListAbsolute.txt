@@ -84,3 +84,4 @@ C:\Users\Nirojd\source\repos\Practice_Management_System_API\PatientVisit_API\obj
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\PatientVisit_API\obj\Debug\net5.0\ref\PatientVisit_API.dll
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.pdb
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.genruntimeconfig.cache
+C:\Users\Nirojd\source\repos\Practice_Management_System_API\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.csproj.AssemblyReference.cache

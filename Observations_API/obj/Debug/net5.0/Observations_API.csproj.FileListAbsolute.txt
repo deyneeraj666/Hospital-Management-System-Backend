@@ -84,3 +84,4 @@ C:\Users\Nirojd\source\repos\Practice_Management_System_API\Observations_API\obj
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\Observations_API\obj\Debug\net5.0\ref\Observations_API.dll
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\Observations_API\obj\Debug\net5.0\Observations_API.pdb
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\Observations_API\obj\Debug\net5.0\Observations_API.genruntimeconfig.cache
+C:\Users\Nirojd\source\repos\Practice_Management_System_API\Observations_API\obj\Debug\net5.0\Observations_API.csproj.AssemblyReference.cache
