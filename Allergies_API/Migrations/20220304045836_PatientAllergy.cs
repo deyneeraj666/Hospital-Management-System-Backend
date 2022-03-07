@@ -1,9 +1,8 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Allergies_API.Migrations
 {
-    public partial class patientAllergies : Migration
+    public partial class PatientAllergy : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,9 +10,9 @@ namespace Allergies_API.Migrations
                 name: "Patient_Allergy_Details",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    AllergyId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     PatientId = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    AllergyId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Allergy_Type = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     Allergy_Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     Allergy_Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
@@ -22,7 +21,7 @@ namespace Allergies_API.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Patient_Allergy_Details", x => x.Id);
+                    table.PrimaryKey("PK_Patient_Allergy_Details", x => x.AllergyId);
                 });
         }
 

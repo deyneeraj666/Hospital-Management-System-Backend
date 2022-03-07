@@ -21,9 +21,9 @@ namespace Allergies_API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<string>>> GetAllergies()
+        public async Task<ActionResult<IEnumerable<string>>> GetAllAllergyTypes()
         {
-            var types= await _allergyRepo.GetAllAllergies();
+            var types= await _allergyRepo.GetAllAllergyTypes();
             return Ok(types);
 
         }

@@ -26,7 +26,7 @@ namespace Allergies_API.Repository
             return allergy;
         }
 
-        public async Task<IEnumerable<string>> GetAllAllergies()
+        public async Task<IEnumerable<string>> GetAllAllergyTypes()
         {
             List<string> allergyTypes = await context.Allergy_Master.Select(x => x.Allergy_Type).Distinct().ToListAsync();
             return allergyTypes;

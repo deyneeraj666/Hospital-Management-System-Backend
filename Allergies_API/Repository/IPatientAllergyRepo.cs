@@ -10,6 +10,7 @@ namespace Allergies_API.Repository
     {
         Task<IEnumerable<PatientAllergy>> GetPatientAllergiesByPatientID(string patientId);
         Task<PatientAllergy> CreatePatientAllergy(PatientAllergy allergy);
+        Task<PatientAllergy> DeletePatientAllergy(int allergyId);
         
     }
 }
