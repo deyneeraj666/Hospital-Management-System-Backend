@@ -47,7 +47,7 @@ namespace UserManagementAndAdministration_API.DataManager
             foreach (var item in user)
             {
                 var role = await GetUserRole(item.Email);
-                result.Add(new GetAllUsersDto 
+                result.Add(new GetAllUsersDto
                 {
                     FirstName = item.FirstName,
                     LastName = item.LastName,
@@ -55,33 +55,33 @@ namespace UserManagementAndAdministration_API.DataManager
                     PhoneNumber = item.PhoneNumber,
                     Dob = item.Dob,
                     accessFailedCount = item.AccessFailedCount,
-                    LockoutEnd= item.LockoutEnd,
-                    Id =item.Id,
-                    Role = role[0]  
+                    LockoutEnd = item.LockoutEnd,
+                    Id = item.Id,
+                    Role = role[0]
                 });
             }
             return result;
         }
-        
+
 
         //public async Task<string> LoginAsync(SignInDto signInDto)
         //{
-           
+
         //    var result = await _signInManager.PasswordSignInAsync(signInDto.Email, signInDto.Password, false, true);
-            
+
         //    if (result.IsLockedOut)
         //    {
         //        return "Locked";
         //    }
         //    if (!result.Succeeded)
         //    {
-               
+
         //        return null;
         //    }
         //    await ResetLockoutUser(signInDto.Email);
-            
+
         //    var user =  _userManager.Users.Where(x => x.Email == signInDto.Email).ToList();
-           
+
 
 
         //    var authClaims = new List<Claim>
@@ -139,7 +139,7 @@ namespace UserManagementAndAdministration_API.DataManager
             var Token = new JwtSecurityToken(
             issuer: _configuration["JWT:Issuer"],
             audience: _configuration["JWT:Audience"],
-            expires: DateTime.Now.AddMinutes(20),
+            expires: DateTime.Now.AddDays(20),
             claims: authClaims,
             signingCredentials: new SigningCredentials(authSigninKey, SecurityAlgorithms.HmacSha256Signature)
             );
@@ -147,7 +147,7 @@ namespace UserManagementAndAdministration_API.DataManager
         }
         public async Task<IdentityResult> SignUpAsync(SignUpDto SignUpDto)
         {
-            
+
             var user = new ApplicationUser()
             {
                 FirstName = SignUpDto.FirstName,
@@ -155,17 +155,17 @@ namespace UserManagementAndAdministration_API.DataManager
                 Email = SignUpDto.Email,
                 PhoneNumber = SignUpDto.PhoneNumber,
                 Dob = SignUpDto.Dob,
-                UserName=SignUpDto.Email,
+                UserName = SignUpDto.Email,
                 //EmpId = SignUpDto.Role == "Patient"? "P"+""
 
-        };
-            
+            };
+
             var result = await _userManager.CreateAsync(user, SignUpDto.Password);
             await _userManager.AddToRoleAsync(user, SignUpDto.Role);
             return result;
         }
 
-       
+
 
 
         public async Task ResetLockoutUser(string email)
@@ -176,10 +176,10 @@ namespace UserManagementAndAdministration_API.DataManager
                 await _userManager.ResetAccessFailedCountAsync(user);
                 await _userManager.SetLockoutEndDateAsync(user, null);
             }
-            
+
         }
 
-        
+
         public async Task<string> ResetPasswordAsync(ChangePasswordDto usermodel)
         {
             ApplicationUser user = await _userManager.FindByEmailAsync(usermodel.Email);
@@ -205,7 +205,7 @@ namespace UserManagementAndAdministration_API.DataManager
 
 
 
-        
+
         public async Task<string> SendPasswordResetCode(string email)
         {
             if (string.IsNullOrEmpty(email))
@@ -213,7 +213,7 @@ namespace UserManagementAndAdministration_API.DataManager
                 return "Email should not be null or empty";
             }
             var user = await _userManager.FindByNameAsync(email);
-            if(user == null)
+            if (user == null)
             {
                 return "No User Found";
             }
@@ -229,17 +229,17 @@ namespace UserManagementAndAdministration_API.DataManager
             };
             await _databaseContext.AddAsync(resetPassword);
             await _databaseContext.SaveChangesAsync();
-            
+
             var message = new Message(new string[] { email }, "Account Recovery", "Hello  "
-                + user.FirstName+","  + "<br> Please find the OTP below valid for 5 Minutes.<br>"+"OTP:<b>"
-                + otp+"</b>" + "<br>Thanks!" );
+                + user.FirstName + "," + "<br> Please find the OTP below valid for 5 Minutes.<br>" + "OTP:<b>"
+                + otp + "</b>" + "<br>Thanks!");
             _emailSender.SendEmail(message);
 
             return "Token sent successfully in email";
         }
 
-        
-       
+
+
         public async Task<string> ResetPassword(string email, string otp, string newPassword)
         {
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(newPassword))
@@ -247,20 +247,20 @@ namespace UserManagementAndAdministration_API.DataManager
                 return "Email & New Password should not be null or empty";
             }
 
-            
+
             var user = await _userManager.FindByNameAsync(email);
 
-            
-           var resetPasswordDetails =  _databaseContext.ResetPassword
-               .Where(rp => rp.OTP == otp && rp.Email == user.Email)
-               .OrderByDescending(rp => rp.InsertDateTimeUTC)
-               .FirstOrDefault();
-            if(resetPasswordDetails == null)
+
+            var resetPasswordDetails = _databaseContext.ResetPassword
+                .Where(rp => rp.OTP == otp && rp.Email == user.Email)
+                .OrderByDescending(rp => rp.InsertDateTimeUTC)
+                .FirstOrDefault();
+            if (resetPasswordDetails == null)
             {
                 return "BadRequest";
             }
-            
-           var expirationDateTimeUtc = resetPasswordDetails.InsertDateTimeUTC.AddMinutes(5);
+
+            var expirationDateTimeUtc = resetPasswordDetails.InsertDateTimeUTC.AddMinutes(5);
 
             if (expirationDateTimeUtc < DateTime.UtcNow)
             {
@@ -273,8 +273,32 @@ namespace UserManagementAndAdministration_API.DataManager
             {
                 return "BadRequest";
             }
-             _databaseContext.Remove(user);
+            _databaseContext.Remove(user);
             return "Success";
+        }
+        public async Task<ApplicationUserDto> GetUserById(string Id)
+        {
+            var objUser = await _userManager.FindByIdAsync(Id);
+            if (objUser != null)
+            {
+                var user = new ApplicationUserDto();
+                user.FirstName = objUser.FirstName;
+                user.LastName = objUser.LastName;
+                user.Email = objUser.Email;
+                user.PhoneNumber = objUser.PhoneNumber;
+                user.Dob = objUser.Dob;
+                user.AccessFailedCount = objUser.AccessFailedCount;
+                user.LockoutEnd = objUser.LockoutEnd;
+                user.EmpId = objUser.EmpId;
+                user.Id = objUser.Id;
+                
+
+                return user;
+            }
+            else
+            {
+                return new ApplicationUserDto();
+            }
         }
     }
 }

@@ -88,10 +88,14 @@ namespace UserManagementAndAdministration_API.Controllers
           
         }
 
+        [HttpGet("GetUserById")]
+        public async Task<ApplicationUserDto> GetUserById([FromQuery] string id)
+        {
+            return await _accountRepository.GetUserById(id);
+        }
 
 
 
-       
         [HttpPost("UnblockUser")]
         public async Task<IActionResult> Unblock(UnblockUserByIdDto userId)
         {
