@@ -26,6 +26,15 @@ namespace Allergies_API.Repository
             return allergy;
         }
 
+
+        public async Task<PatientAllergy> DeletePatientAllergy(int allergyId)
+        {
+            PatientAllergy patientAllergy = await _dbContext.Patient_Allergy_Details.FirstOrDefaultAsync(a => a.AllergyId == allergyId);
+            _dbContext.Patient_Allergy_Details.Remove(patientAllergy);
+            await _dbContext.SaveChangesAsync();
+            return patientAllergy;
+        }
+
         public async Task<IEnumerable<PatientAllergy>> GetPatientAllergiesByPatientID(string patientId)
         {
             IEnumerable<PatientAllergy> allergies = await _dbContext.Patient_Allergy_Details.Where(p => p.PatientId == patientId).ToListAsync();

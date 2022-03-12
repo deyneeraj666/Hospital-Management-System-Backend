@@ -6,6 +6,8 @@ namespace UserManagementAndAdministration_API.DTO
     public class SignUpDto
     {
         [Required]
+        public string Title { get; set; }
+        [Required]
         public string FirstName { get; set; }
         [Required]
         public string LastName { get; set; }
@@ -19,5 +21,7 @@ namespace UserManagementAndAdministration_API.DTO
         public DateTime Dob { get; set; }
         [Required]
         public  string Role { get; set; }
+
+        public string EmpId { get; set; }
     }
 }

@@ -47,119 +47,86 @@ namespace UserManagementAndAdministration_API.DataManager
             foreach (var item in user)
             {
                 var role = await GetUserRole(item.Email);
-                result.Add(new GetAllUsersDto
+
+               
+                
+                result.Add(new GetAllUsersDto 
                 {
+                    EmpId =item.EmpId,
+                    Title=item.Title,
                     FirstName = item.FirstName,
                     LastName = item.LastName,
                     Email = item.Email,
                     PhoneNumber = item.PhoneNumber,
                     Dob = item.Dob,
                     accessFailedCount = item.AccessFailedCount,
-                    LockoutEnd = item.LockoutEnd,
-                    Id = item.Id,
-                    Role = role[0]
+                    Status= item.LockoutEnd==null?"Active":"Blocked",
+                    Id =item.Id,
+                    Role = role[0]  
+                    
                 });
             }
             return result;
         }
 
 
-        //public async Task<string> LoginAsync(SignInDto signInDto)
-        //{
-
-        //    var result = await _signInManager.PasswordSignInAsync(signInDto.Email, signInDto.Password, false, true);
-
-        //    if (result.IsLockedOut)
-        //    {
-        //        return "Locked";
-        //    }
-        //    if (!result.Succeeded)
-        //    {
-
-        //        return null;
-        //    }
-        //    await ResetLockoutUser(signInDto.Email);
-
-        //    var user =  _userManager.Users.Where(x => x.Email == signInDto.Email).ToList();
-
-
-
-        //    var authClaims = new List<Claim>
-        //    {
-        //        new Claim(ClaimTypes.Name, signInDto.Email,signInDto.Password),
-        //        new Claim("Email", signInDto.Email),
-        //        new Claim("FirstName", user[0].FirstName),
-        //        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-        //        new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString())
-        //    };
-        //    var authSigninKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_configuration["JWT:Key"]));
-
-        //    var Token = new JwtSecurityToken(
-        //        issuer: _configuration["JWT:Issuer"],
-        //        audience: _configuration["JWT:Audience"],
-        //        expires: DateTime.Now.AddMinutes(15),
-        //        claims: authClaims,
-        //        signingCredentials: new SigningCredentials(authSigninKey, SecurityAlgorithms.HmacSha256Signature)
-        //        );
-        //    return new JwtSecurityTokenHandler().WriteToken(Token);
-        //}
-
         public async Task<string> LoginAsync(SignInDto signInDto)
         {
-
+           
             var result = await _signInManager.PasswordSignInAsync(signInDto.Email, signInDto.Password, false, true);
-
+            
             if (result.IsLockedOut)
             {
                 return "Locked";
             }
             if (!result.Succeeded)
             {
-
+               
                 return null;
             }
             await ResetLockoutUser(signInDto.Email);
-
-            var user = _userManager.Users.Where(x => x.Email == signInDto.Email).ToList();
+            
+            var user =  _userManager.Users.Where(x => x.Email == signInDto.Email).ToList();
             var roles = await GetUserRole(signInDto.Email);
             var authClaims = new List<Claim>
             {
-            new Claim(ClaimTypes.Name, signInDto.Email,signInDto.Password),
-            new Claim("Email", signInDto.Email),
-            new Claim("FirstName", user[0].FirstName),
-            new Claim("Id", user[0].Id),
-            new Claim("Role", roles[0]),
-            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-            new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString())
+                new Claim(ClaimTypes.Name, signInDto.Email,signInDto.Password),
+                new Claim("Email", signInDto.Email),
+                new Claim("FirstName", user[0].FirstName),
+                new Claim("Id", user[0].Id),
+                new Claim("Role", roles[0]),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString())
             };
             var authSigninKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_configuration["JWT:Key"]));
 
-
-
             var Token = new JwtSecurityToken(
-            issuer: _configuration["JWT:Issuer"],
-            audience: _configuration["JWT:Audience"],
-            expires: DateTime.Now.AddDays(20),
-            claims: authClaims,
-            signingCredentials: new SigningCredentials(authSigninKey, SecurityAlgorithms.HmacSha256Signature)
-            );
+                issuer: _configuration["JWT:Issuer"],
+                audience: _configuration["JWT:Audience"],
+                expires: DateTime.Now.AddMinutes(1000),
+                claims: authClaims,
+                signingCredentials: new SigningCredentials(authSigninKey, SecurityAlgorithms.HmacSha256Signature)
+                );
             return new JwtSecurityTokenHandler().WriteToken(Token);
         }
+    
+
         public async Task<IdentityResult> SignUpAsync(SignUpDto SignUpDto)
         {
 
             var user = new ApplicationUser()
             {
+                Title = SignUpDto.Title,
                 FirstName = SignUpDto.FirstName,
                 LastName = SignUpDto.LastName,
                 Email = SignUpDto.Email,
                 PhoneNumber = SignUpDto.PhoneNumber,
                 Dob = SignUpDto.Dob,
                 UserName = SignUpDto.Email,
-                //EmpId = SignUpDto.Role == "Patient"? "P"+""
+                EmpId = SignUpDto.Role == "Patient" ? "PAT" + RandomNumberGeneartor.Generate(100000, 999999)+ SignUpDto.FirstName.Substring(0,3).ToUpper() : "EMP" + RandomNumberGeneartor.Generate(100000, 999999)+ SignUpDto.FirstName.Substring(0, 3).ToUpper()
 
             };
-
+            
             var result = await _userManager.CreateAsync(user, SignUpDto.Password);
             await _userManager.AddToRoleAsync(user, SignUpDto.Role);
             return result;
@@ -176,7 +143,43 @@ namespace UserManagementAndAdministration_API.DataManager
                 await _userManager.ResetAccessFailedCountAsync(user);
                 await _userManager.SetLockoutEndDateAsync(user, null);
             }
+            
+        }
 
+
+        public async Task BlockUser(string email)
+        {
+            var user = await _userManager.FindByNameAsync(email);
+            if (user != null)
+            {
+                await _userManager.SetLockoutEndDateAsync(user, DateTime.Now.AddDays(30));
+            }
+
+        }
+
+
+        public async Task DeleteUser(string email)
+        {
+            var user = await _userManager.FindByNameAsync(email);
+            if (user != null)
+            {
+                await _userManager.DeleteAsync(user);
+            }
+
+        }
+
+        public async Task<IdentityResult> UpdateUser(UpdateUserDto update_user)
+        {
+            ApplicationUser user = await _userManager.FindByIdAsync(update_user.id);
+            user.UserName = update_user.Email;
+            user.Title = update_user.Title;
+            user.FirstName = update_user.FirstName;
+            user.LastName = update_user.LastName;
+            user.Dob = update_user.Dob;
+            user.Email = update_user.Email;
+            user.PhoneNumber = update_user.PhoneNumber;
+            user.EmpId = update_user.Role == "Patient" ? "PAT" + RandomNumberGeneartor.Generate(100000, 999999) + user.FirstName.Substring(0, 3).ToUpper() : "EMP" + RandomNumberGeneartor.Generate(100000, 999999) + user.FirstName.Substring(0, 3).ToUpper();
+            return await _userManager.UpdateAsync(user);
         }
 
 
@@ -224,7 +227,6 @@ namespace UserManagementAndAdministration_API.DataManager
                 Email = email,
                 OTP = otp.ToString(),
                 Token = token,
-                //UserId = user.Id,
                 InsertDateTimeUTC = DateTime.UtcNow
             };
             await _databaseContext.AddAsync(resetPassword);

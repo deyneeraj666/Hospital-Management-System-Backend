@@ -8,11 +8,12 @@ namespace Allergies_API.Model
 {
     public class PatientAllergy
     {
+        
+        //public Guid Id { get; set; }
         [Key]
-        public Guid Id { get; set; }
+        public int AllergyId { get; set; }
         public string PatientId { get; set; }
-        public string AllergyId { get; set; }
-
+       
         [MaxLength(50)]
         public string Allergy_Type { get; set; }
 
