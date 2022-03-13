@@ -29,7 +29,7 @@ namespace PatientManagementAPI.Controllers
             {
                 return demographic;
             }
-            return Ok("Not");
+            return Ok("Not Found");
         }
 
         [HttpPost]
