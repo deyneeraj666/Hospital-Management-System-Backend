@@ -93,10 +93,12 @@ namespace UserManagementAndAdministration_API.DataManager
                 new Claim(ClaimTypes.Name, signInDto.Email,signInDto.Password),
                 new Claim("Email", signInDto.Email),
                 new Claim("FirstName", user[0].FirstName),
+                new Claim("LastName", string.IsNullOrEmpty(user[0].LastName)?"":user[0].LastName),
                 new Claim("Id", user[0].Id),
                 new Claim("Role", roles[0]),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString())
+                new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()),
+                new Claim("EmpId", user[0].EmpId)
             };
             var authSigninKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_configuration["JWT:Key"]));
 
