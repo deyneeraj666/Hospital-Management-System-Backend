@@ -26,7 +26,6 @@ C:\Users\Rajeshwari\Desktop\PMS_Backend\PatientVisit_API\obj\Debug\net5.0\Patien
 C:\Users\Rajeshwari\Desktop\PMS_Backend\PatientVisit_API\obj\Debug\net5.0\ref\PatientVisit_API.dll
 C:\Users\Rajeshwari\Desktop\PMS_Backend\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.pdb
 C:\Users\Rajeshwari\Desktop\PMS_Backend\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.genruntimeconfig.cache
-C:\Users\Rajeshwari\Desktop\PMS_Backend\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.csproj.AssemblyReference.cache
 C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\bin\Debug\net5.0\appsettings.Development.json
 C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\bin\Debug\net5.0\appsettings.json
 C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\bin\Debug\net5.0\PatientVisit_API.exe
@@ -85,3 +84,4 @@ C:\Users\Nirojd\source\repos\Practice_Management_System_API\PatientVisit_API\obj
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.pdb
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.genruntimeconfig.cache
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.csproj.AssemblyReference.cache
+C:\Users\Rajeshwari\Desktop\PMS_Backend\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.csproj.AssemblyReference.cache
