@@ -84,4 +84,3 @@ C:\Users\Nirojd\source\repos\Practice_Management_System_API\Diagnoses_API\obj\De
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\Diagnoses_API\obj\Debug\net5.0\Diagnoses_API.pdb
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\Diagnoses_API\obj\Debug\net5.0\Diagnoses_API.genruntimeconfig.cache
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\Diagnoses_API\obj\Debug\net5.0\Diagnoses_API.csproj.AssemblyReference.cache
-C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\Diagnoses_API\obj\Debug\net5.0\Diagnoses_API.csproj.AssemblyReference.cache

@@ -84,3 +84,4 @@ C:\Users\Nirojd\source\repos\Practice_Management_System_API\Medications_API\obj\
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\Medications_API\obj\Debug\net5.0\ref\Medications_API.dll
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\Medications_API\obj\Debug\net5.0\Medications_API.pdb
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\Medications_API\obj\Debug\net5.0\Medications_API.genruntimeconfig.cache
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\Medications_API\obj\Debug\net5.0\Medications_API.csproj.AssemblyReference.cache

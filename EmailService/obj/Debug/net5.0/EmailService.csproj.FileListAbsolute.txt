@@ -33,3 +33,4 @@ C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\EmailService\obj\Debug\net
 C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\EmailService\obj\Debug\net5.0\EmailService.dll
 C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\EmailService\obj\Debug\net5.0\ref\EmailService.dll
 C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\EmailService\obj\Debug\net5.0\EmailService.pdb
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\EmailService\obj\Debug\net5.0\EmailService.csproj.AssemblyReference.cache
