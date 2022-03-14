@@ -28,11 +28,10 @@ namespace PatientManagementAPI.Controllers
             {
                 return emergency;
             }
-            return Ok();
+            return Ok("Not Found");
         }
 
         [HttpPost]
-
         public async Task<ActionResult<EmergencyContact>> Create(EmergencyContact emergency)
         {
             await _emergencyRepo.CreateUpdateEmergencyContact(emergency);

@@ -56,6 +56,7 @@ C:\Users\Nirojd\source\repos\Practice_Management_System_API\Medications_API\obj\
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\Medications_API\obj\Debug\net5.0\ref\Medications_API.dll
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\Medications_API\obj\Debug\net5.0\Medications_API.pdb
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\Medications_API\obj\Debug\net5.0\Medications_API.genruntimeconfig.cache
+<<<<<<< HEAD
 C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\Medications_API\bin\Debug\net5.0\appsettings.Development.json
 C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\Medications_API\bin\Debug\net5.0\appsettings.json
 C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\Medications_API\bin\Debug\net5.0\Medications_API.exe
@@ -85,3 +86,6 @@ C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\Medications_API\obj\Debug\
 C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\Medications_API\obj\Debug\net5.0\ref\Medications_API.dll
 C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\Medications_API\obj\Debug\net5.0\Medications_API.pdb
 C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\Medications_API\obj\Debug\net5.0\Medications_API.genruntimeconfig.cache
+=======
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\Medications_API\obj\Debug\net5.0\Medications_API.csproj.AssemblyReference.cache
+>>>>>>> 50815597123b3ed44fcc67d74198ddd8f8167363

@@ -26,7 +26,39 @@ C:\Users\Rajeshwari\Desktop\PMS_Backend\PatientVisit_API\obj\Debug\net5.0\Patien
 C:\Users\Rajeshwari\Desktop\PMS_Backend\PatientVisit_API\obj\Debug\net5.0\ref\PatientVisit_API.dll
 C:\Users\Rajeshwari\Desktop\PMS_Backend\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.pdb
 C:\Users\Rajeshwari\Desktop\PMS_Backend\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.genruntimeconfig.cache
+<<<<<<< HEAD
 C:\Users\Rajeshwari\Desktop\PMS_Backend\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.csproj.AssemblyReference.cache
+=======
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\bin\Debug\net5.0\appsettings.Development.json
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\bin\Debug\net5.0\appsettings.json
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\bin\Debug\net5.0\PatientVisit_API.exe
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\bin\Debug\net5.0\PatientVisit_API.deps.json
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\bin\Debug\net5.0\PatientVisit_API.runtimeconfig.json
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\bin\Debug\net5.0\PatientVisit_API.runtimeconfig.dev.json
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\bin\Debug\net5.0\PatientVisit_API.dll
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\bin\Debug\net5.0\ref\PatientVisit_API.dll
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\bin\Debug\net5.0\PatientVisit_API.pdb
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.AssemblyInfoInputs.cache
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.AssemblyInfo.cs
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.csproj.CoreCompileInputs.cache
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.MvcApplicationPartsAssemblyInfo.cs
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.MvcApplicationPartsAssemblyInfo.cache
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\obj\Debug\net5.0\staticwebassets\PatientVisit_API.StaticWebAssets.Manifest.cache
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\obj\Debug\net5.0\staticwebassets\PatientVisit_API.StaticWebAssets.xml
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\obj\Debug\net5.0\scopedcss\bundle\PatientVisit_API.styles.css
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.RazorTargetAssemblyInfo.cache
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.csproj.CopyComplete
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.dll
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\obj\Debug\net5.0\ref\PatientVisit_API.dll
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.pdb
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.genruntimeconfig.cache
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.csproj.AssemblyReference.cache
+>>>>>>> 50815597123b3ed44fcc67d74198ddd8f8167363
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\PatientVisit_API\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\PatientVisit_API\bin\Debug\net5.0\appsettings.json
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\PatientVisit_API\bin\Debug\net5.0\PatientVisit_API.exe
@@ -56,6 +88,7 @@ C:\Users\Nirojd\source\repos\Practice_Management_System_API\PatientVisit_API\obj
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.pdb
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.genruntimeconfig.cache
 C:\Users\Nirojd\source\repos\Practice_Management_System_API\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.csproj.AssemblyReference.cache
+<<<<<<< HEAD
 C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\bin\Debug\net5.0\appsettings.Development.json
 C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\bin\Debug\net5.0\appsettings.json
 C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\bin\Debug\net5.0\PatientVisit_API.exe
@@ -85,3 +118,6 @@ C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\obj\Debug
 C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\obj\Debug\net5.0\ref\PatientVisit_API.dll
 C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.pdb
 C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.genruntimeconfig.cache
+=======
+C:\Users\Rajeshwari\Desktop\PMS_Backend\PatientVisit_API\obj\Debug\net5.0\PatientVisit_API.csproj.AssemblyReference.cache
+>>>>>>> 50815597123b3ed44fcc67d74198ddd8f8167363
