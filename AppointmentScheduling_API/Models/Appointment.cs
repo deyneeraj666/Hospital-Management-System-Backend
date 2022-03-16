@@ -22,6 +22,6 @@ namespace AppointmentScheduling_API.Models
         public DateTime endDateTime { get; set; }
 
         public string description { get; set; }
-        public string username { get; set; }
+        public string physicianId { get; set; }
     }
 }

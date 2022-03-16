@@ -32,7 +32,7 @@ namespace AppointmentScheduling_API.DataManager
                 startDateTime = ConvertDateUTCtoISD(appointment.startDateTime),
                 endDateTime = ConvertDateUTCtoISD(appointment.endDateTime),
                 description = appointment.description,
-                username = appointment.username
+                physicianId = appointment.physicianId
             };
 
             await _databaseContext.AppointmentDetails.AddAsync(newAppointment);
@@ -65,7 +65,7 @@ namespace AppointmentScheduling_API.DataManager
                     startDateTime = appointment.startDateTime,
                     endDateTime = appointment.endDateTime,
                     description = appointment.description,
-                    username=appointment.username
+                    physicianId=appointment.physicianId
                 });
             }
             return lstappointmentdto;
@@ -89,7 +89,7 @@ namespace AppointmentScheduling_API.DataManager
                     startDateTime = appointment.startDateTime,
                     endDateTime = appointment.endDateTime,
                     description = appointment.description,
-                    username=appointment.username
+                    physicianId=appointment.physicianId
                 });
             }
             return lstappointmentdto;
@@ -115,7 +115,7 @@ namespace AppointmentScheduling_API.DataManager
                     startDateTime = appointment.startDateTime,
                     endDateTime = appointment.endDateTime,
                     description = appointment.description,
-                    username = appointment.username
+                    physicianId = appointment.physicianId
                 };
                 _databaseContext.SaveChanges();
                 return new JsonResult("records deleted successfully");
@@ -138,7 +138,7 @@ namespace AppointmentScheduling_API.DataManager
                 _appointment.startDateTime = ConvertDateUTCtoISD(appointment.startDateTime);
                 _appointment.endDateTime = ConvertDateUTCtoISD(appointment.endDateTime);
                 _appointment.description = appointment.description;
-                _appointment.username = appointment.username;
+                _appointment.physicianId = appointment.physicianId;
                 _databaseContext.SaveChanges();
                 return new JsonResult("records updated successfully");
             }

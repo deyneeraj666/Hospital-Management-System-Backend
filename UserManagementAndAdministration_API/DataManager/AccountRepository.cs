@@ -99,10 +99,7 @@ namespace UserManagementAndAdministration_API.DataManager
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()),
                 new Claim("EmpId", user[0].EmpId)
-<<<<<<< HEAD
-=======
 
->>>>>>> 50815597123b3ed44fcc67d74198ddd8f8167363
             };
             var authSigninKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_configuration["JWT:Key"]));
 

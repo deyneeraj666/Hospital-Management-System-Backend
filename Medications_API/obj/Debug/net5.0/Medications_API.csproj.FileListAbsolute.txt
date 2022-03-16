@@ -87,5 +87,4 @@ C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\Medications_API\obj\Debug\
 C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\Medications_API\obj\Debug\net5.0\Medications_API.pdb
 C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\Medications_API\obj\Debug\net5.0\Medications_API.genruntimeconfig.cache
 =======
-C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\Medications_API\obj\Debug\net5.0\Medications_API.csproj.AssemblyReference.cache
 >>>>>>> 50815597123b3ed44fcc67d74198ddd8f8167363

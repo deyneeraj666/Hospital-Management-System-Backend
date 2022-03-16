@@ -30,7 +30,7 @@ namespace AppointmentScheduling_API.DTO
         [Required]
         public string description { get; set; }
         [Required]
-        public string username { get; set; }
+        public string physicianId { get; set; }
 
 
 

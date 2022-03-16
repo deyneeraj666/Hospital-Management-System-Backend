@@ -44,13 +44,13 @@ namespace AppointmentScheduling_API.Migrations
                     b.Property<string>("physician")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("physicianId")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("startDateTime")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("status")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("username")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");

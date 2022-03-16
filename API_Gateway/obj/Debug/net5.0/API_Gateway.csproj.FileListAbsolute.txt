@@ -82,3 +82,4 @@ C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\API_Gateway\obj\Debug\net5
 C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\API_Gateway\obj\Debug\net5.0\ref\API_Gateway.dll
 C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\API_Gateway\obj\Debug\net5.0\API_Gateway.pdb
 C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\API_Gateway\obj\Debug\net5.0\API_Gateway.genruntimeconfig.cache
+C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\API_Gateway\obj\Debug\net5.0\API_Gateway.csproj.AssemblyReference.cache
