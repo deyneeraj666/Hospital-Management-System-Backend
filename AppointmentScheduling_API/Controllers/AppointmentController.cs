@@ -56,5 +56,12 @@ namespace AppointmentScheduling_API.Controllers
         {
             return await _appointmentRepository.UpdateAppointmentByidAsync(id, Appointment);
         }
+
+        [HttpGet("GetAppointmentsByIdAndStatusConfirmed")]
+        public async Task<ActionResult<IEnumerable<AppointmentsDto>>> GetAppointmentsByIdAndStatusConfirmed(string patientId)
+        {
+            IEnumerable<AppointmentsDto> appointments = await _appointmentRepository.GetAppointmentsByIdAndStatusConfirmed(patientId);
+            return Ok(appointments);
+        }
     }
 }

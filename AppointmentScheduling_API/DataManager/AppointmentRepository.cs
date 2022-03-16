@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using AppointmentScheduling_API.Models;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace AppointmentScheduling_API.DataManager
 {
@@ -148,6 +149,26 @@ namespace AppointmentScheduling_API.DataManager
         {
             return TimeZoneInfo.ConvertTimeFromUtc(_date,
                    TimeZoneInfo.FindSystemTimeZoneById("India Standard Time"));
+        }
+
+        public async Task<IEnumerable<AppointmentsDto>> GetAppointmentsByIdAndStatusConfirmed(string patientId)
+        {
+            IEnumerable<AppointmentsDto> appointments = await _databaseContext.AppointmentDetails.Where(a => a.status == "CONFIRMED" && a.p_id == patientId)
+                .Select(i => new AppointmentsDto()
+                {
+                    id = i.id,
+                    p_id = i.p_id,
+                    patientName = i.patientName,
+                    physician = i.physician,
+                    meetingTitle = i.meetingTitle,
+                    status = i.status,
+                    startDateTime = i.startDateTime,
+                    endDateTime = i.endDateTime,
+                    description = i.description,
+                    physicianId = i.physicianId
+
+                }).ToListAsync();
+            return appointments;
         }
     }
 }

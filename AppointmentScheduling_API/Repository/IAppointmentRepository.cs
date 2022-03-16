@@ -17,5 +17,6 @@ namespace AppointmentScheduling_API.Repository
         Task<List<AppointmentsDto>> GetAppointmentByIdAsync(string P_Id);
         Task<IActionResult> RemoveAppointmentByidAsync(int Id);
         Task<IActionResult> UpdateAppointmentByidAsync(int Id,AppointmentsDto appointment);
+        Task<IEnumerable<AppointmentsDto>> GetAppointmentsByIdAndStatusConfirmed(string patientId);
     }
 }
