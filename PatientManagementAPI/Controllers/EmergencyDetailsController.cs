@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PatientManagementAPI.DTO;
 using PatientManagementAPI.Models;
 using PatientManagementAPI.Repository;
 using System;
@@ -21,7 +22,7 @@ namespace PatientManagementAPI.Controllers
         }
 
         [HttpGet("{id}", Name = "GetEmergencyDetailByPatientId")]
-        public async Task<ActionResult<EmergencyContact>> GetEmergencyDetailByPatientId(string id)
+        public async Task<ActionResult<EmergencyContactDto>> GetEmergencyDetailByPatientId(string id)
         {
             var emergency = await _emergencyRepo.GetEmergencyContactByPatientID(id);
             if (emergency != null)
@@ -32,7 +33,7 @@ namespace PatientManagementAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<EmergencyContact>> Create(EmergencyContact emergency)
+        public async Task<ActionResult<EmergencyContactDto>> Create(EmergencyContactDto emergency)
         {
             await _emergencyRepo.CreateUpdateEmergencyContact(emergency);
             return emergency;
