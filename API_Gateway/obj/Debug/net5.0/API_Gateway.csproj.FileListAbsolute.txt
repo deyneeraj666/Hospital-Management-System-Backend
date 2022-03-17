@@ -111,4 +111,3 @@ C:\PMS_BACKEND\API_Gateway\obj\Debug\net5.0\API_Gateway.dll
 C:\PMS_BACKEND\API_Gateway\obj\Debug\net5.0\ref\API_Gateway.dll
 C:\PMS_BACKEND\API_Gateway\obj\Debug\net5.0\API_Gateway.pdb
 C:\PMS_BACKEND\API_Gateway\obj\Debug\net5.0\API_Gateway.genruntimeconfig.cache
-C:\PMS_BACKEND\API_Gateway\obj\Debug\net5.0\API_Gateway.csproj.AssemblyReference.cache
