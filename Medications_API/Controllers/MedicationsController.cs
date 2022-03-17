@@ -19,7 +19,6 @@ namespace Medications_API.Controllers
             _medicationsRepo = medicationRepo;
         }
         [HttpPost]
-
         public async Task<ActionResult<Medications>> CreateUpdateMedications(Medications medications)
         {
             try
@@ -33,37 +32,22 @@ namespace Medications_API.Controllers
             return medications;
 
 
-        }
+        }       
 
-        [HttpGet("{id}", Name = "GetMedicationsDetailsByPatientID")]
+        [HttpGet("{id}", Name = "GetMedicationsDetailsByApptID")]
+        public async Task<ActionResult<IEnumerable<Medications>>> GetMedicationsDetailsByApptID(string id)
+        {
+            var medicationsDetails = await _medicationsRepo.GetMedicationsDetailsByApptID(id);
+            //if (medicationsDetails != null)
+            //{
+            //    return medicationsDetails;
+            //}
+                return Ok(medicationsDetails);
+        }
+        [HttpGet("GetMedicationsDetailsByPatientID")]
         public async Task<ActionResult<Medications>> GetMedicationsDetailsByPatientID(string id)
         {
             var medicationsDetails = await _medicationsRepo.GetMedicationsDetailsByPatientID(id);
-            if (medicationsDetails != null)
-            {
-                return medicationsDetails;
-            }
-            return Ok("Data not Found");
-        }
-        [HttpGet(Name = "GetallProcedures")]
-        public List<MedicationsMaster> GetMedications()
-        {
-            List<MedicationsMaster> medicinelists = _medicationsRepo.GetMedications();
-            if (medicinelists.Count > 0)
-            {
-                return medicinelists;
-            }
-            else
-            {
-                return null;
-
-            }
-
-        }
-        [HttpGet("{id}", Name = "GetMedicationsDetailsByApptID")]
-        public async Task<ActionResult<Medications>> GetMedicationsDetailsByApptID(string id)
-        {
-            var medicationsDetails = await _medicationsRepo.GetMedicationsDetailsByApptID(id);
             if (medicationsDetails != null)
             {
                 return medicationsDetails;

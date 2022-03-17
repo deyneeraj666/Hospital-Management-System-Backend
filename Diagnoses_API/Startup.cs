@@ -1,6 +1,9 @@
+using Diagnoses_API.Models;
+using Diagnoses_API.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -31,6 +34,8 @@ namespace Diagnoses_API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Diagnoses_API", Version = "v1" });
             });
+            services.AddDbContext<DiagnosisDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("UserManagementDBConnectionString")));
+            services.AddTransient<IDiagnosisRepo, DiagnosisRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,6 +47,9 @@ namespace Diagnoses_API
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Diagnoses_API v1"));
             }
+            app.UseCors(options => options.WithOrigins("http://localhost:4200")
+                                          .AllowAnyMethod()
+                                          .AllowAnyHeader());
 
             app.UseRouting();
 

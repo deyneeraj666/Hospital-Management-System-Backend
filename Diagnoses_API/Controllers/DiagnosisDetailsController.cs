@@ -16,25 +16,28 @@ namespace Diagnoses_API.Controllers
         {
             _diagnosisDetailsRepo = diagnosisRepo;
         }
-        [HttpGet("{apptid}", Name = "GetDiagDetailsByApptID")]
-        public async Task<ActionResult<DiagnosisModel>> GetDiagDetailsByApptID(string apptid)
+
+        [HttpGet(Name = "GetAllDiagnosis")]
+        public List<DiagnosisMaster> GetAllDiagnosis()
         {
-            var diagnosisDetails = await _diagnosisDetailsRepo.GetDiagDetailsByApptID(apptid);
-            if (diagnosisDetails != null)
+            List<DiagnosisMaster> diaglists = _diagnosisDetailsRepo.GetAllDiagnosis();
+            if (diaglists.Count > 0)
             {
-                return diagnosisDetails;
+                return diaglists;
             }
-            return Ok("Data not Found");
+            else
+            {
+                return null;
+
+            }
+
         }
-        [HttpGet("GetDiagDetailsByPatientID")]
-        public async Task<ActionResult<DiagnosisModel>> GetDiagDetailsByPatientId(string pid)
+        [HttpGet("{name}", Name = "GetDiagosisNameByDiagnosisCode")]
+
+        public string GetDiagosisNameByDiagnosisCode(string name)
         {
-            var diagnosisDetails = await _diagnosisDetailsRepo.GetDiagDetailsByPatientID(pid);
-            if (diagnosisDetails != null)
-            {
-                return diagnosisDetails;
-            }
-            return Ok("Data not Found");
+            var names = _diagnosisDetailsRepo.GetDiagosisCodeByDiagnosisNameAsync(name);
+            return names;
         }
     }
 }

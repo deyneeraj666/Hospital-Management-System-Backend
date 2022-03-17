@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = VitalSigns_API
-build_property.ProjectDir = C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\VitalSigns_API\
+build_property.ProjectDir = C:\PMS_BACKEND\VitalSigns_API\

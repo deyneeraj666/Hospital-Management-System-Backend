@@ -33,41 +33,27 @@ namespace Diagnoses_API.Controllers
 
 
         }
-        //[HttpGet("{pid}", Name = "GetDiagDetailsByPatientID")]
-        //public async Task<ActionResult<DiagnosisModel>> GetDiagDetailsByPatientId(string pid)
-        //{
-        //    var diagnosisDetails = await _diagnosisRepo.GetDiagDetailsByPatientID(pid);
-        //    if (diagnosisDetails != null)
-        //    {
-        //        return diagnosisDetails;
-        //    }
-        //    return Ok("Data not Found");
-        //}
-        [HttpGet(Name = "GetAllDiagnosis")]
-        public List<DiagnosisMaster> GetAllDiagnosis()
+        [HttpGet("{apptid}", Name = "GetDiagDetailsByApptID")]
+        public async Task<ActionResult<IEnumerable<DiagnosisModel>>> GetDiagDetailsByApptID(string apptid)
         {
-            List<DiagnosisMaster> diaglists = _diagnosisRepo.GetAllDiagnosis();
-            if (diaglists.Count > 0)
-            {
-                return diaglists;
-            }
-            else
-            {
-                return null;
-
-            }
-
+            var diagnosisDetails = await _diagnosisRepo.GetDiagDetailsByApptID(apptid);
+            //if (diagnosisDetails != null)
+            //{
+            //    return diagnosisDetails;
+            //}
+            return Ok(diagnosisDetails);
         }
-        //[HttpGet("{apptid}", Name = "GetDiagDetailsByApptID")]
-        //public async Task<ActionResult<DiagnosisModel>> GetDiagDetailsByApptID(string apptid)
-        //{
-        //    var diagnosisDetails = await _diagnosisRepo.GetDiagDetailsByApptID(apptid);
-        //    if (diagnosisDetails != null)
-        //    {
-        //        return diagnosisDetails;
-        //    }
-        //    return Ok("Data not Found");
-        //}
+        [HttpGet("GetDiagDetailsByPatientID")]
+        public async Task<ActionResult<DiagnosisModel>> GetDiagDetailsByPatientId(string pid)
+        {
+            var diagnosisDetails = await _diagnosisRepo.GetDiagDetailsByPatientID(pid);
+            if (diagnosisDetails != null)
+            {
+                return diagnosisDetails;
+            }
+            return Ok("Data not Found");
+        }
+                
         [HttpDelete]
         public void DeleteDiagDetails(string patientId)
         {
@@ -75,12 +61,6 @@ namespace Diagnoses_API.Controllers
             
             
         }
-        [HttpGet("{name}", Name = "GetDiagosisNameByDiagnosisCode")]
-
-        public  string GetDiagosisNameByDiagnosisCode(string name)
-        {
-            var names =  _diagnosisRepo.GetDiagosisCodeByDiagnosisNameAsync(name);
-            return names;
-        }
+        
     }
 }

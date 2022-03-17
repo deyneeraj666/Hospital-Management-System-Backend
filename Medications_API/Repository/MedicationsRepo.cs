@@ -52,9 +52,11 @@ namespace Medications_API.Repository
             Medications medicaionsModel = await _context.Medications.Where(p => p.PatientId == patientId).FirstOrDefaultAsync();
             return medicaionsModel;
         }
-        public async Task<Medications> GetMedicationsDetailsByApptID(string appId)
+        public async Task<IEnumerable<Medications>> GetMedicationsDetailsByApptID(string appId)
         {
-            Medications medicaionsModel = await _context.Medications.Where(p => p.AppointmentId == appId).FirstOrDefaultAsync();
+            //Medications medicaionsModel = await _context.Medications.Where(p => p.AppointmentId == appId).FirstOrDefaultAsync();
+            //return medicaionsModel;
+            List<Medications> medicaionsModel = await _context.Medications.Where(p => p.AppointmentId == appId).Distinct().ToListAsync();
             return medicaionsModel;
         }
         public List<MedicationsMaster> GetMedications()

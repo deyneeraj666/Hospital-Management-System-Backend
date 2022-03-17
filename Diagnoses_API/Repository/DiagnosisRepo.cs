@@ -58,10 +58,10 @@ namespace Diagnoses_API.Repository
             return diagnosisModel;
 
         }
-        public async Task<DiagnosisModel> GetDiagDetailsByApptID(string apptId)
+        public async Task<IEnumerable<DiagnosisModel>> GetDiagDetailsByApptID(string apptId)
         {
             //throw new NotImplementedException();
-            DiagnosisModel diagnosisModel = await _context.Diagnosis.Where(p => p.AppointmentId == apptId).FirstOrDefaultAsync();
+            List<DiagnosisModel> diagnosisModel = await _context.Diagnosis.Where(p => p.AppointmentId == apptId).Distinct().ToListAsync();
             return diagnosisModel;
 
         }

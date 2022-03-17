@@ -34,3 +34,15 @@ C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\EmailService\obj\Debug\net
 C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\EmailService\obj\Debug\net5.0\EmailService.dll
 C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\EmailService\obj\Debug\net5.0\ref\EmailService.dll
 C:\Pranjal_Sample_Project\PreImpact\PMS_MicroServices\EmailService\obj\Debug\net5.0\EmailService.pdb
+C:\PMS_BACKEND\EmailService\bin\Debug\net5.0\EmailService.deps.json
+C:\PMS_BACKEND\EmailService\bin\Debug\net5.0\EmailService.dll
+C:\PMS_BACKEND\EmailService\bin\Debug\net5.0\ref\EmailService.dll
+C:\PMS_BACKEND\EmailService\bin\Debug\net5.0\EmailService.pdb
+C:\PMS_BACKEND\EmailService\obj\Debug\net5.0\EmailService.csproj.AssemblyReference.cache
+C:\PMS_BACKEND\EmailService\obj\Debug\net5.0\EmailService.GeneratedMSBuildEditorConfig.editorconfig
+C:\PMS_BACKEND\EmailService\obj\Debug\net5.0\EmailService.AssemblyInfoInputs.cache
+C:\PMS_BACKEND\EmailService\obj\Debug\net5.0\EmailService.AssemblyInfo.cs
+C:\PMS_BACKEND\EmailService\obj\Debug\net5.0\EmailService.csproj.CoreCompileInputs.cache
+C:\PMS_BACKEND\EmailService\obj\Debug\net5.0\EmailService.dll
+C:\PMS_BACKEND\EmailService\obj\Debug\net5.0\ref\EmailService.dll
+C:\PMS_BACKEND\EmailService\obj\Debug\net5.0\EmailService.pdb
