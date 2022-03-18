@@ -1,4 +1,5 @@
-﻿using PatientManagementAPI.Models;
+﻿using PatientManagementAPI.DTO;
+using PatientManagementAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ namespace PatientManagementAPI.Repository
 {
     public interface IEmergencyRepo
     {
-        Task<EmergencyContact> GetEmergencyContactByPatientID(string patientId);
-        Task<EmergencyContact> CreateUpdateEmergencyContact(EmergencyContact emergency);
+        Task<EmergencyContactDto> GetEmergencyContactByPatientID(string patientId);
+        Task<EmergencyContactDto> CreateUpdateEmergencyContact(EmergencyContactDto emergency);
     }
 }

@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PatientManagementAPI.Models
+namespace PatientManagementAPI.DTO
 {
-    public class EmergencyContact
+    public class EmergencyContactDto
     {
-        [Key]
         public int Id { get; set; }
         public string PatientId { get; set; }
         public string FirstName { get; set; }
@@ -18,6 +16,5 @@ namespace PatientManagementAPI.Models
         public string ContactNumber { get; set; }
         public string Address { get; set; }
         public string PatientPortalAccess { get; set; }
-
     }
 }

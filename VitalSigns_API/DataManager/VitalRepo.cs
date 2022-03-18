@@ -21,11 +21,11 @@ namespace VitalSigns_API.DataManager
 
         public async Task<VitalDto> CreateUpdatePatientVital(VitalDto vital)
         {
-            var existingVital = await _context.Patient_Vitals.Where(v=>v.AppointmentId == vital.AppointmentId).FirstOrDefaultAsync();
+            var existingVital = await _context.Patient_Vitals.Where(v => v.AppointmentId == vital.AppointmentId).FirstOrDefaultAsync();
 
             if (existingVital == null)
             {
-                 existingVital = new Vital()
+                existingVital = new Vital()
                 {
                     PatientId = vital.PatientId,
                     AppointmentId = vital.AppointmentId,
@@ -38,7 +38,7 @@ namespace VitalSigns_API.DataManager
 
                 };
                 _context.Patient_Vitals.Add(existingVital);
-             
+
             }
             else
             {
@@ -53,7 +53,7 @@ namespace VitalSigns_API.DataManager
 
                 _context.Patient_Vitals.Update(existingVital);
             }
-            
+
 
             await _context.SaveChangesAsync();
             vital.Id = existingVital.Id;
@@ -63,9 +63,9 @@ namespace VitalSigns_API.DataManager
 
         public async Task<VitalDto> GetPatientVitalByAppointmentId(int apptId)
         {
-            VitalDto vital = await _context.Patient_Vitals.Where(p => p.AppointmentId == apptId).Select(i=> new VitalDto()
+            VitalDto vital = await _context.Patient_Vitals.Where(p => p.AppointmentId == apptId).Select(i => new VitalDto()
             {
-                Id=i.Id,
+                Id = i.Id,
                 PatientId = i.PatientId,
                 AppointmentId = i.AppointmentId,
                 Height = i.Height,

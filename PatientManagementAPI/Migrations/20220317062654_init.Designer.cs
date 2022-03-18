@@ -10,8 +10,8 @@ using PatientManagementAPI.Models;
 namespace PatientManagementAPI.Migrations
 {
     [DbContext(typeof(PatientDbContext))]
-    [Migration("20220301050442_DemoChanges")]
-    partial class DemoChanges
+    [Migration("20220317062654_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,9 +23,10 @@ namespace PatientManagementAPI.Migrations
 
             modelBuilder.Entity("PatientManagementAPI.Models.Demographic", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("ContactNumber")
                         .IsRequired()
@@ -80,9 +81,10 @@ namespace PatientManagementAPI.Migrations
 
             modelBuilder.Entity("PatientManagementAPI.Models.EmergencyContact", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");

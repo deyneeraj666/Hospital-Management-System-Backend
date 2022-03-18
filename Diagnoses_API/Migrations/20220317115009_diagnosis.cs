@@ -1,9 +1,8 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Diagnoses_API.Migrations
 {
-    public partial class DiagnosisMigration : Migration
+    public partial class diagnosis : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,12 +10,13 @@ namespace Diagnoses_API.Migrations
                 name: "Diagnosis",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     diag_code = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     diag_name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ddate = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     pid = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    AppointmentId = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    AppointmentId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

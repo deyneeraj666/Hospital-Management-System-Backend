@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PatientManagementAPI.DTO;
 using PatientManagementAPI.Models;
 using PatientManagementAPI.Repository;
 using System;
@@ -22,7 +23,7 @@ namespace PatientManagementAPI.Controllers
 
 
         [HttpGet("{id}", Name = "GetDemographicByPatientId")]
-        public async Task<ActionResult<Demographic>> GetDemographicByPatientId(string id)
+        public async Task<ActionResult<DemographicDto>> GetDemographicByPatientId(string id)
         {
             var demographic = await _demographicRepo.GetDemographicByPatientID(id);
             if (demographic != null)
@@ -34,7 +35,7 @@ namespace PatientManagementAPI.Controllers
 
         [HttpPost]
 
-        public async Task<ActionResult<Demographic>> Create(Demographic demographic)
+        public async Task<ActionResult<DemographicDto>> Create(DemographicDto demographic)
         {
             await _demographicRepo.CreateUpdateDemographic(demographic);
             return demographic;

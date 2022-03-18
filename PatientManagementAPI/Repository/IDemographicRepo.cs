@@ -1,4 +1,5 @@
-﻿using PatientManagementAPI.Models;
+﻿using PatientManagementAPI.DTO;
+using PatientManagementAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +9,9 @@ namespace PatientManagementAPI.Repository
 {
     public interface IDemographicRepo
     {
-        Task<Demographic> GetDemographicByPatientID(string patientId);
+        Task<DemographicDto> GetDemographicByPatientID(string patientId);
 
-        Task<Demographic> CreateUpdateDemographic(Demographic demographic);
+        Task<DemographicDto> CreateUpdateDemographic(DemographicDto demographic);
 
 
     }

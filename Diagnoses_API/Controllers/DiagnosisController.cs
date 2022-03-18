@@ -34,7 +34,7 @@ namespace Diagnoses_API.Controllers
 
         }
         [HttpGet("{apptid}", Name = "GetDiagDetailsByApptID")]
-        public async Task<ActionResult<IEnumerable<DiagnosisModel>>> GetDiagDetailsByApptID(string apptid)
+        public async Task<ActionResult<IEnumerable<DiagnosisModel>>> GetDiagDetailsByApptID(int apptid)
         {
             var diagnosisDetails = await _diagnosisRepo.GetDiagDetailsByApptID(apptid);
             //if (diagnosisDetails != null)
