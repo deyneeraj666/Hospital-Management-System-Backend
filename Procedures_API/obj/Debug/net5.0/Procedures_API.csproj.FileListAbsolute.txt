@@ -58,3 +58,4 @@ C:\PMS_BACKEND\Procedures_API\obj\Debug\net5.0\Procedures_API.dll
 C:\PMS_BACKEND\Procedures_API\obj\Debug\net5.0\ref\Procedures_API.dll
 C:\PMS_BACKEND\Procedures_API\obj\Debug\net5.0\Procedures_API.pdb
 C:\PMS_BACKEND\Procedures_API\obj\Debug\net5.0\Procedures_API.genruntimeconfig.cache
+C:\PMS_BACKEND\Procedures_API\obj\Debug\net5.0\Procedures_API.csproj.AssemblyReference.cache

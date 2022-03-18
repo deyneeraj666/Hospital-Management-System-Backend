@@ -52,7 +52,7 @@ namespace Procedures_API.Repository
             return proceduresModel;
 
         }
-        public async Task<IEnumerable<ProceduresModel>> GeProceduresDetailsByApptID(string apptID)
+        public async Task<IEnumerable<ProceduresModel>> GeProceduresDetailsByApptID(int apptID)
         {
             //throw new NotImplementedException();
             List<ProceduresModel> proceduresModel = await _context.Procedures.Where(p => p.AppointmentId == apptID).Distinct().ToListAsync();

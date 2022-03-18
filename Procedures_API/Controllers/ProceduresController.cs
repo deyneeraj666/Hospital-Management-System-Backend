@@ -47,7 +47,7 @@ namespace Procedures_API.Controllers
         }
         
         [HttpGet("{id}", Name = "GeProceduresDetailsByApptID")]
-        public async Task<ActionResult<IEnumerable<ProceduresModel>>> GeProceduresDetailsByApptID(string id)
+        public async Task<ActionResult<IEnumerable<ProceduresModel>>> GeProceduresDetailsByApptID(int id)
         {
             var proceduresDetails = await _proceduresRepo.GeProceduresDetailsByApptID(id);
             //if (proceduresDetails != null)

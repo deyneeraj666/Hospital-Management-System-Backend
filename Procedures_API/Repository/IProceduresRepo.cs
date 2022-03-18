@@ -12,6 +12,6 @@ namespace Procedures_API.Repository
 
         Task<ProceduresModel> CreateUpdateProcedures(ProceduresModel procedure);
         List<ProcedureMaster> GetProcedures();
-        Task<IEnumerable<ProceduresModel>> GeProceduresDetailsByApptID(string apptID);
+        Task<IEnumerable<ProceduresModel>> GeProceduresDetailsByApptID(int apptID);
     }
 }
