@@ -1,4 +1,5 @@
-﻿using Allergies_API.Model;
+﻿using Allergies_API.DTO;
+using Allergies_API.Model;
 using Allergies_API.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -40,7 +41,7 @@ namespace Allergies_API.Controllers
         //}
 
         [HttpPost]
-        public async Task<ActionResult<Allergy>> Add(Allergy allergy)
+        public async Task<ActionResult<AllergyDto>> Add(AllergyDto allergy)
         {
             await _allergyRepo.AddAllergy(allergy);
             return Ok(allergy);

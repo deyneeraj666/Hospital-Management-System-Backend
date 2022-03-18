@@ -1,4 +1,5 @@
-﻿using Allergies_API.Model;
+﻿using Allergies_API.DTO;
+using Allergies_API.Model;
 using Allergies_API.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -21,23 +22,23 @@ namespace Allergies_API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<PatientAllergy>> Add(PatientAllergy allergy)
+        public async Task<ActionResult<PatientAllergyDto>> Add(PatientAllergyDto allergy)
         {
             await _allergyRepo.CreatePatientAllergy(allergy);
             return Ok(allergy);
         }
 
         [HttpGet("{patientId}", Name = "GetPatientAllergies")]
-        public async Task<ActionResult<IEnumerable<PatientAllergy>>> GetPatientAllergies(string patientId)
+        public async Task<ActionResult<IEnumerable<PatientAllergyDto>>> GetPatientAllergies(string patientId)
         {
-            IEnumerable<PatientAllergy> patientAllergies = await _allergyRepo.GetPatientAllergiesByPatientID(patientId);
+            IEnumerable<PatientAllergyDto> patientAllergies = await _allergyRepo.GetPatientAllergiesByPatientID(patientId);
             return Ok(patientAllergies);
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult<PatientAllergy>> DeletePatientAllergy(int id)
+        public async Task<ActionResult<PatientAllergyDto>> DeletePatientAllergy(int id)
         {
-            PatientAllergy patientAllergy = await _allergyRepo.DeletePatientAllergy(id);
+            PatientAllergyDto patientAllergy = await _allergyRepo.DeletePatientAllergy(id);
             return Ok(patientAllergy);
         }
     }

@@ -58,7 +58,7 @@ namespace Diagnoses_API.Repository
             return diagnosisModel;
 
         }
-        public async Task<IEnumerable<DiagnosisModel>> GetDiagDetailsByApptID(string apptId)
+        public async Task<IEnumerable<DiagnosisModel>> GetDiagDetailsByApptID(int apptId)
         {
             //throw new NotImplementedException();
             List<DiagnosisModel> diagnosisModel = await _context.Diagnosis.Where(p => p.AppointmentId == apptId).Distinct().ToListAsync();

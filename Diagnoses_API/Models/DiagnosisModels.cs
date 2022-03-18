@@ -9,7 +9,7 @@ namespace Diagnoses_API.Models
     public class DiagnosisModel
     {
         [Key]
-        public Guid Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
         public string diag_code { get; set; }
@@ -24,6 +24,6 @@ namespace Diagnoses_API.Models
         public string pid { get; set; }
 
         [Required]
-        public string AppointmentId { get; set; }
+        public int AppointmentId { get; set; }
     }
 }
