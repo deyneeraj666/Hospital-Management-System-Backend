@@ -17,7 +17,7 @@ namespace Diagnoses_API.Repository
         }
         public async Task<DiagnosisModel> AddDiagnosisDetails(DiagnosisModel diagnosis)
         {
-             var _existingDiag = await _context.Diagnosis.Where(p => p.Id == diagnosis.Id).FirstOrDefaultAsync();
+             var _existingDiag = await _context.Diagnosis.Where(p => p.AppointmentId == diagnosis.AppointmentId).FirstOrDefaultAsync();
             try
             {
                
@@ -28,6 +28,7 @@ namespace Diagnoses_API.Repository
                 }
                 else
                 {
+                    _existingDiag.Id = diagnosis.Id;
                     _existingDiag.pid = diagnosis.pid;
                     _existingDiag.diag_code = diagnosis.diag_code;
                     _existingDiag.diag_name = diagnosis.diag_name;
@@ -66,12 +67,12 @@ namespace Diagnoses_API.Repository
 
         }
 
-        public async void DeleteDiagDetails(string Id)
-        {
-            DiagnosisModel diagnosisModel = await _context.Diagnosis.Where(p => p.pid == Id).FirstOrDefaultAsync();
+        //public async void DeleteDiagDetails(string Id)
+        //{
+        //    DiagnosisModel diagnosisModel = await _context.Diagnosis.Where(p => p.pid == Id).FirstOrDefaultAsync();
 
-            _context.Diagnosis.Remove(diagnosisModel);
-        }
+        //    _context.Diagnosis.Remove(diagnosisModel);
+        //}
 
         public List<string> GetDiagosisCodeByDiagnosisNameAsync(string name)
         {
@@ -79,6 +80,22 @@ namespace Diagnoses_API.Repository
             return diagCode;
         }
 
-        
+        public async Task<DiagnosisModel> DeleteDiagDetails(int Id)
+        {
+            DiagnosisModel diagno = await _context.Diagnosis.Where(p => p.Id == Id).FirstOrDefaultAsync();
+            DiagnosisModel dianosisData = new DiagnosisModel()
+            {
+                pid = diagno.pid,
+                Id = diagno.Id,
+                diag_name = diagno.diag_name,
+                diag_code = diagno.diag_code,
+                ddate=diagno.ddate,
+                AppointmentId=diagno.AppointmentId
+            };
+            _context.Diagnosis.Remove(diagno);
+            await _context.SaveChangesAsync();
+
+            return dianosisData;
+        }
     }
 }

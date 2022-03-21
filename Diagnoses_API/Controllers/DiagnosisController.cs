@@ -54,13 +54,14 @@ namespace Diagnoses_API.Controllers
             return Ok("Data not Found");
         }
                 
-        [HttpDelete]
-        public void DeleteDiagDetails(string patientId)
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<DiagnosisModel>> DeleteDiagDetails(int id)
         {
-            _diagnosisRepo.DeleteDiagDetails(patientId);
-            
+           DiagnosisModel diagnosisModel= await _diagnosisRepo.DeleteDiagDetails(id);
+            return Ok(diagnosisModel);
             
         }
+
         
     }
 }

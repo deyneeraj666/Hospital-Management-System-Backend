@@ -54,6 +54,12 @@ namespace Medications_API.Controllers
             }
             return Ok("Data not Found");
         }
+        //[HttpDelete("{id}")]
+        //public async Task<ActionResult<PatientAllergyDto>> DeletePatientAllergy(int id)
+        //{
+        //    PatientAllergyDto patientAllergy = await _allergyRepo.DeletePatientAllergy(id);
+        //    return Ok(patientAllergy);
+        //}
 
     }
 }

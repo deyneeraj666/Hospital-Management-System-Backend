@@ -13,7 +13,8 @@ namespace Diagnoses_API
         Task<DiagnosisModel> AddDiagnosisDetails(DiagnosisModel diagnosis);
         List<DiagnosisMaster> GetAllDiagnosis();
         Task<IEnumerable<DiagnosisModel>> GetDiagDetailsByApptID(int apptId);
-        void DeleteDiagDetails(string patientId);
+        //void DeleteDiagDetails(string patientId);
+        Task<DiagnosisModel> DeleteDiagDetails(int Id);
         List<string> GetDiagosisCodeByDiagnosisNameAsync(string name);
     }
 }

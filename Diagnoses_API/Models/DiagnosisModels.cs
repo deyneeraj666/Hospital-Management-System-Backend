@@ -8,22 +8,21 @@ namespace Diagnoses_API.Models
 {
     public class DiagnosisModel
     {
-        [Key]
+        
         public int Id { get; set; }
 
-        [Required]
+        
         public string diag_code { get; set; }
 
-        [Required]
+       
         public string diag_name { get; set; }
 
-        [Required]
+        
         public string ddate { get; set; }
 
-        [Required]
+        
         public string pid { get; set; }
-
-        [Required]
+[Required]
         public int AppointmentId { get; set; }
     }
 }
