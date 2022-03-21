@@ -35,7 +35,7 @@ namespace Medications_API.Controllers
         }       
 
         [HttpGet("{id}", Name = "GetMedicationsDetailsByApptID")]
-        public async Task<ActionResult<IEnumerable<Medications>>> GetMedicationsDetailsByApptID(string id)
+        public async Task<ActionResult<IEnumerable<Medications>>> GetMedicationsDetailsByApptID(int id)
         {
             var medicationsDetails = await _medicationsRepo.GetMedicationsDetailsByApptID(id);
             //if (medicationsDetails != null)

@@ -12,7 +12,11 @@ namespace Medications_API.Repository
 
         Task<Medications> CreateUpdateMedications(Medications medications);
         List<MedicationsMaster> GetMedications();
-        Task<IEnumerable<Medications>> GetMedicationsDetailsByApptID(string appId);
+        Task<IEnumerable<Medications>> GetMedicationsDetailsByApptID(int appId);
         //List<string> GetMedicationsDetailsByApptID(string appId);
+
+        List<MedicationsMaster> GetDrugDetailsByDrugNameAsync(string name);
     }
+
+
 }

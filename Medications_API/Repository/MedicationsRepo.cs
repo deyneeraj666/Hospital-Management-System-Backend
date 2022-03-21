@@ -52,7 +52,7 @@ namespace Medications_API.Repository
             Medications medicaionsModel = await _context.Medications.Where(p => p.PatientId == patientId).FirstOrDefaultAsync();
             return medicaionsModel;
         }
-        public async Task<IEnumerable<Medications>> GetMedicationsDetailsByApptID(string appId)
+        public async Task<IEnumerable<Medications>> GetMedicationsDetailsByApptID(int appId)
         {
             //Medications medicaionsModel = await _context.Medications.Where(p => p.AppointmentId == appId).FirstOrDefaultAsync();
             //return medicaionsModel;
@@ -64,6 +64,12 @@ namespace Medications_API.Repository
             //List<ProceduresModel> procedures = _context.Procedures.ToList();
             List<MedicationsMaster> medicationMaster = _context.MedicationsMaster.ToList();
             return medicationMaster;
+        }
+
+        public List<MedicationsMaster> GetDrugDetailsByDrugNameAsync(string name)
+        {
+            List<MedicationsMaster> mediDetails = _context.MedicationsMaster.Where(a => a.DrugName == name).Distinct().ToList();
+            return mediDetails; throw new NotImplementedException();
         }
     }
 }

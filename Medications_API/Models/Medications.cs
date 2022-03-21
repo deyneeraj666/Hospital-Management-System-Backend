@@ -13,7 +13,7 @@ namespace Medications_API.Models
         [Required]
         public string PatientId { get; set; }
         [Required]
-        public string AppointmentId { get; set; }
+        public int AppointmentId { get; set; }
         [Required]
         public string DrugName { get; set; }
 

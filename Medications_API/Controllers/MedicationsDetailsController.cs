@@ -22,38 +22,18 @@ namespace Medications_API.Controllers
         public List<MedicationsMaster> GetMedications()
         {
             List<MedicationsMaster> medicinelists = _medicationsDetailsRepo.GetMedications();
-            //if (medicinelists.Count > 0)
-            //{
-            //    return medicinelists;
-            //}
-            //else
-            //{
-            //    return null;
 
-            //}
             return medicinelists;
 
         }
-        //[HttpGet("{id}", Name = "GetMedicationsDetailsByApptID")]
-        //public async Task<ActionResult<Medications>> GetMedicationsDetailsByApptID(string id)
-        //{
-        //    var medicationsDetails = await _medicationsDetailsRepo.GetMedicationsDetailsByApptID(id);
-        //    if (medicationsDetails != null)
-        //    {
-        //        return medicationsDetails;
-        //    }
-        //    return Ok("Data not Found");
-        //}
+        [HttpGet("{name}", Name = "GetDrugDetailsByDrugNameAsync")]
+        public List<MedicationsMaster> GetDrugDetailsByDrugNameAsync( string name)
+        {
+            List<MedicationsMaster> medicinelists = _medicationsDetailsRepo.GetDrugDetailsByDrugNameAsync(name);
 
-        //[HttpGet("GetMedicationsDetailsByPatientID")]
-        //public async Task<ActionResult<Medications>> GetMedicationsDetailsByPatientID(string id)
-        //{
-        //    var medicationsDetails = await _medicationsDetailsRepo.GetMedicationsDetailsByPatientID(id);
-        //    if (medicationsDetails != null)
-        //    {
-        //        return medicationsDetails;
-        //    }
-        //    return Ok("Data not Found");
-        //}
+            return medicinelists;
+
+        }
+
     }
 }

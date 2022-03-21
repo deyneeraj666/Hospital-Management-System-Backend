@@ -27,6 +27,24 @@ namespace Procedures_API.Controllers
             
 
         }
+        [HttpGet("{name}", Name = "GetProcedureNameByProcedureCode")]
+
+        public List<string> GetProcedureNameByProcedureCode(string name)
+        {
+
+            try
+            {
+                List<string> names = _proceduresDetailsRepo.GetProcedureCodeByProcedureNameAsync(name);
+                Console.WriteLine(names);
+                return names;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+
+
+        }
 
     }
 }

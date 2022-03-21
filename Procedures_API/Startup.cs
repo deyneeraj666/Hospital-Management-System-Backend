@@ -48,13 +48,13 @@ namespace Procedures_API
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Procedures_API v1"));
             }
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
-            app.UseRouting();
+
             app.UseCors(options => options.WithOrigins("http://localhost:4200")
                                           .AllowAnyMethod()
                                           .AllowAnyHeader());
-            
+            app.UseRouting();
 
             app.UseAuthorization();
 

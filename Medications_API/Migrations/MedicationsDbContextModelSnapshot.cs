@@ -25,9 +25,8 @@ namespace Medications_API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("AppointmentId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("AppointmentId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Date")
                         .IsRequired()

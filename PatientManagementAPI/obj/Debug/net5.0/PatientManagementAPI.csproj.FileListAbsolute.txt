@@ -221,3 +221,4 @@ C:\PMS_BACKEND\PatientManagementAPI\obj\Debug\net5.0\PatientManagementAPI.dll
 C:\PMS_BACKEND\PatientManagementAPI\obj\Debug\net5.0\ref\PatientManagementAPI.dll
 C:\PMS_BACKEND\PatientManagementAPI\obj\Debug\net5.0\PatientManagementAPI.pdb
 C:\PMS_BACKEND\PatientManagementAPI\obj\Debug\net5.0\PatientManagementAPI.genruntimeconfig.cache
+C:\PMS_BACKEND\PatientManagementAPI\obj\Debug\net5.0\PatientManagementAPI.csproj.AssemblyReference.cache
