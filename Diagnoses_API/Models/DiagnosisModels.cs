@@ -22,7 +22,7 @@ namespace Diagnoses_API.Models
 
         
         public string pid { get; set; }
-[Required]
+
         public int AppointmentId { get; set; }
     }
 }
