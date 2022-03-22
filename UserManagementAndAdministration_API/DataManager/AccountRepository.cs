@@ -129,7 +129,15 @@ namespace UserManagementAndAdministration_API.DataManager
                 EmpId = SignUpDto.Role == "Patient" ? "PAT" + RandomNumberGeneartor.Generate(100000, 999999)+ SignUpDto.FirstName.Substring(0,3).ToUpper() : "EMP" + RandomNumberGeneartor.Generate(100000, 999999)+ SignUpDto.FirstName.Substring(0, 3).ToUpper()
 
             };
-            
+
+            if (SignUpDto.Role != "Patient")
+            {
+                var message = new Message(new string[] { SignUpDto.Email }, "Welcome to CT Hospital", "Hello "
+                + user.FirstName + "," + "<br><br> Please Find Id And Password To Login.<br>" + "Id:<b>"
+                + SignUpDto.Email + "</b>" + "<br>Password:" + "<b>Password@123</b>" + "<br>Thanks!");
+                _emailSender.SendEmail(message);
+            }
+
             var result = await _userManager.CreateAsync(user, SignUpDto.Password);
             await _userManager.AddToRoleAsync(user, SignUpDto.Role);
             return result;
