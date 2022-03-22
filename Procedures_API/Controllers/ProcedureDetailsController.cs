@@ -29,12 +29,12 @@ namespace Procedures_API.Controllers
         }
         [HttpGet("{name}", Name = "GetProcedureNameByProcedureCode")]
 
-        public List<string> GetProcedureNameByProcedureCode(string name)
+        public Task<IEnumerable<string>> GetProcedureNameByProcedureCode(string name)
         {
 
             try
             {
-                List<string> names = _proceduresDetailsRepo.GetProcedureCodeByProcedureNameAsync(name);
+                Task<IEnumerable<string>> names = _proceduresDetailsRepo.GetProcedureCodeByProcedureNameAsync(name);
                 Console.WriteLine(names);
                 return names;
             }

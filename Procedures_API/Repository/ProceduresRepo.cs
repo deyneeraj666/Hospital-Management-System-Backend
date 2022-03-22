@@ -66,9 +66,9 @@ namespace Procedures_API.Repository
             return procedureMaster;
         }
 
-        public List<string> GetProcedureCodeByProcedureNameAsync(string name)
+        public async Task<IEnumerable<string>> GetProcedureCodeByProcedureNameAsync(string name)
         {
-            var procCode = _context.ProceduresMaster.Where(a => a.ProcedureName == name).Select(x => x.ProcedureCode).Distinct().ToList();
+            List<string> procCode = await _context.ProceduresMaster.Where(a => a.ProcedureName == name).Select(x=>x.ProcedureCode).Distinct().ToListAsync();
             return procCode;
         }
     }

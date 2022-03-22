@@ -74,9 +74,9 @@ namespace Diagnoses_API.Repository
         //    _context.Diagnosis.Remove(diagnosisModel);
         //}
 
-        public List<string> GetDiagosisCodeByDiagnosisNameAsync(string name)
+        public List<DiagnosisMaster> GetDiagosisCodeByDiagnosisNameAsync(string name)
         {
-            var diagCode =  _context.DiagnosisMaster.Where(a => a.diag_name == name).Select(x => x.diag_code).Distinct().ToList();
+            List<DiagnosisMaster> diagCode =  _context.DiagnosisMaster.Where(a => a.diag_name == name).Distinct().ToList();
             return diagCode;
         }
 

@@ -34,12 +34,12 @@ namespace Diagnoses_API.Controllers
         }
         [HttpGet("{name}", Name = "GetDiagosisNameByDiagnosisCode")]
 
-        public List<string> GetDiagosisNameByDiagnosisCode(string name)
+        public List<DiagnosisMaster> GetDiagosisNameByDiagnosisCode(string name)
         {
             
             try
             {
-                List<string> names = _diagnosisDetailsRepo.GetDiagosisCodeByDiagnosisNameAsync(name);
+                List<DiagnosisMaster> names = _diagnosisDetailsRepo.GetDiagosisCodeByDiagnosisNameAsync(name);
                 Console.WriteLine(names);
                 return names;
             }
